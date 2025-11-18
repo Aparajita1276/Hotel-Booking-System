@@ -6,22 +6,16 @@
   <title>Available Hotels</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-gray-100 p-6">
   <div class="max-w-6xl mx-auto">
     <h1 class="text-3xl font-bold mb-6 text-center">Available Hotels</h1>
-
-    <!-- Search & Filter Section -->
     <div class="bg-white p-5 rounded-xl shadow mb-6">
       <h2 class="text-xl font-semibold mb-3">Search Hotels</h2>
-
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <input
           type="text"
           placeholder="Search hotel name"
-          class="p-2 border rounded"
-        />
-
+          class="p-2 border rounded"/>
         <select class="p-2 border rounded">
           <option value="">City</option>
           <option>Mumbai</option>
@@ -31,7 +25,6 @@
           <option>Chennai</option>
           <option>Goa</option>
         </select>
-
         <select class="p-2 border rounded">
           <option value="">Price Range</option>
           <option>₹1500 - ₹3000</option>
@@ -39,19 +32,13 @@
           <option>₹5000 - ₹8000</option>
         </select>
       </div>
-
-      <!-- ⭐ Search Button Added -->
       <div class="mt-4 flex justify-end">
         <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
           Search
         </button>
       </div>
     </div>
-
-    <!-- Hotels List -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Hotel 1 -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">Sunrise Grand Hotel</h3>
         <p class="text-gray-700 mt-1">Location: Mumbai</p>
@@ -68,11 +55,9 @@
             </button>
         </a>
       </div>
-
-      <!-- Hotel 2 -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">City Comfort Inn</h3>
-        <p class="text-gray-700 mt-1">Location: Delhi</p>
+        <p class="text-gray-700 mt-1">Location: New Delhi</p>
         <p class="text-gray-700 mt-1">
           Starting Price:
           <span class="font-bold">₹2500/night</span>
@@ -86,8 +71,6 @@
             </button>
         </a>
       </div>
-
-      <!-- Hotel 3 -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">Royal Orchid Resort</h3>
         <p class="text-gray-700 mt-1">Location: Bengaluru</p>
@@ -104,8 +87,6 @@
             </button>
         </a>
       </div>
-
-      <!-- Hotel 4 (Kolkata) -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">Bengal Heritage Hotel</h3>
         <p class="text-gray-700 mt-1">Location: Kolkata</p>
@@ -121,8 +102,6 @@
             </button>
         </a>
       </div>
-
-      <!-- Hotel 5 (Chennai) -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">Chennai Paradise Inn</h3>
         <p class="text-gray-700 mt-1">Location: Chennai</p>
@@ -138,8 +117,6 @@
             </button>
         </a>
       </div>
-
-      <!-- Hotel 6 (Goa) -->
       <div class="bg-white rounded-xl shadow p-4">
         <h3 class="text-xl font-semibold">Goa Beach Resort</h3>
         <p class="text-gray-700 mt-1">Location: Goa</p>
@@ -155,7 +132,6 @@
             </button>
         </a>
       </div>
-
     </div>
   </div>
 </body>
