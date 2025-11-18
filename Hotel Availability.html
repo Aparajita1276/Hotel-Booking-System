@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Hotels</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">Available Hotels</h1>
+
+    <!-- Search & Filter Section -->
+    <div class="bg-white p-5 rounded-xl shadow mb-6">
+      <h2 class="text-xl font-semibold mb-3">Search Hotels</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <input
+          type="text"
+          placeholder="Search hotel name"
+          class="p-2 border rounded"
+        />
+
+        <select class="p-2 border rounded">
+          <option value="">City</option>
+          <option>Mumbai</option>
+          <option>Delhi</option>
+          <option>Bengaluru</option>
+          <option>Kolkata</option>
+          <option>Chennai</option>
+          <option>Goa</option>
+        </select>
+
+        <select class="p-2 border rounded">
+          <option value="">Price Range</option>
+          <option>₹1500 - ₹3000</option>
+          <option>₹3000 - ₹5000</option>
+          <option>₹5000 - ₹8000</option>
+        </select>
+      </div>
+
+      <!-- ⭐ Search Button Added -->
+      <div class="mt-4 flex justify-end">
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Hotels List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Hotel 1 -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Sunrise Grand Hotel</h3>
+        <p class="text-gray-700 mt-1">Location: Mumbai</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price:
+          <span class="font-bold">₹3500/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, Pool, Gym, AC
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">City Comfort Inn</h3>
+        <p class="text-gray-700 mt-1">Location: Delhi</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price:
+          <span class="font-bold">₹2500/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, Breakfast
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Royal Orchid Resort</h3>
+        <p class="text-gray-700 mt-1">Location: Bengaluru</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price:
+          <span class="font-bold">₹6000/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, Pool, Spa, AC
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+      <!-- Hotel 4 (Kolkata) -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Bengal Heritage Hotel</h3>
+        <p class="text-gray-700 mt-1">Location: Kolkata</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price: <span class="font-bold">₹3200/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, AC, Breakfast
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+      <!-- Hotel 5 (Chennai) -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Chennai Paradise Inn</h3>
+        <p class="text-gray-700 mt-1">Location: Chennai</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price: <span class="font-bold">₹2800/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, AC, TV
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+      <!-- Hotel 6 (Goa) -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Goa Beach Resort</h3>
+        <p class="text-gray-700 mt-1">Location: Goa</p>
+        <p class="text-gray-700 mt-1">
+          Starting Price: <span class="font-bold">₹4500/night</span>
+        </p>
+        <p class="text-gray-700 mt-2">
+          <strong>Amenities:</strong> WiFi, Pool, Beach Access, Spa
+        </p>
+        <a href="Room availability.html">
+            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                View Rooms
+            </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Rooms</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">Rooms available</h1>
+
+    <!-- Filter Section -->
+    <div class="bg-white p-5 rounded-xl shadow mb-6">
+      <h2 class="text-xl font-semibold mb-3">Filter Rooms</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <select class="p-2 border rounded">
+          <option value="">Room Type</option>
+          <option>Single</option>
+          <option>Double</option>
+          <option>Suite</option>
+          <option>Shared Room</option>
+          <option>Multiple Rooms</option>
+        </select>
+
+        <select class="p-2 border rounded">
+          <option value="">Max Price</option>
+          <option>₹3000</option>
+          <option>₹5000</option>
+          <option>₹8000</option>
+          <option>₹10000</option>
+        </select>
+
+        <select class="p-2 border rounded">
+          <option value="">Amenities</option>
+          <option>WiFi</option>
+          <option>AC</option>
+          <option>Breakfast</option>
+          <option>Swimming Pool</option>
+          <option>Snacks</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Laundry</option>
+          <option>Room Services</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Room Card -->
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Deluxe Room</h3>
+        <p class="text-gray-700 mt-1">Price: <span class="font-bold">₹4500/night</span></p>
+        <p class="text-gray-700 mt-2"><strong>Amenities:</strong> WiFi, AC, TV, Breakfast</p>        
+        <a href="Book Now.html">
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Single Room</h3>
+        <p class="text-gray-700 mt-1">Price: <span class="font-bold">₹2500/night</span></p>
+        <p class="text-gray-700 mt-2"><strong>Amenities:</strong> WiFi, TV</p>        
+        <a href="Book Now.html">
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Suite</h3>
+        <p class="text-gray-700 mt-1">Price: <span class="font-bold">₹8000/night</span></p>
+        <p class="text-gray-700 mt-2"><strong>Amenities:</strong> WiFi, AC, TV, Breakfast, Mini Bar</p>        
+        <a href="Book Now.html">
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Shared Room</h3>
+        <p class="text-gray-700 mt-1">Price: <span class="font-bold">₹1500/night</span></p>
+        <p class="text-gray-700 mt-2"><strong>Amenities:</strong> WiFi, Locker, Breakfast, Lunch, Room Services</p>
+        <label class="block mt-3 text-gray-700">Number of Beds:</label>
+        <input type="number" min="2" max="4" value="1" class="border rounded p-2 w-full">        
+        <a href="Book Now.html">
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4">
+        <h3 class="text-xl font-semibold">Family Room</h3>
+        <p class="text-gray-700 mt-1">Price: <span class="font-bold">₹6000/night</span></p>
+        <p class="text-gray-700 mt-2"><strong>Amenities:</strong> WiFi, AC, TV, Breakfast, 2 Queen Beds</p>
+        <label class="block mt-3 text-gray-700">Rooms to Book:</label>
+        <input type="number" min="2" max="15" value="1" class="border rounded p-2 w-full">
+        <a href="Book Now.html">
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
