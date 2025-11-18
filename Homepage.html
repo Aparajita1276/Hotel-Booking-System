@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyHotel - Book Your Stay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-gray-100">
+    <header
+      class="fixed top-0 left-0 right-0 bg-white shadow-xl z-50 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 py-3">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-6">
+            <h1 class="text-3xl font-bold text-blue-600">BookMyHotel</h1>
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-2 bg-gray-50 p-3 rounded-lg shadow-inner w-full md:w-auto">
+            <select id="location" class="px-3 py-2 rounded border">
+              <option>Mumbai</option>
+              <option>Kolkata</option>
+              <option>Delhi</option>
+              <option>Goa</option>
+              <option>Chennai</option>
+            </select>
+            <input
+              type="text"
+              id="checkin"
+              placeholder="Check-in"
+              class="px-3 py-2 rounded border"/>
+            <input
+              type="text"
+              id="checkout"
+              placeholder="Check-out"
+              class="px-3 py-2 rounded border"/>
+            <input
+              type="number"
+              id="guests"
+              min="1"
+              max="20"
+              value="2"
+              class="px-3 py-2 rounded border w-20"/>
+            <a href="Hotel Availability.html">
+              <button onclick="searchHotels()" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 font-medium">
+                Search
+              </button>
+            </a>
+          </div>
+          <div class="flex gap-4">
+            <button
+              onclick="openModal('loginModal')"
+              class="hover:text-blue-600 font-medium">
+              Login
+            </button>
+            <button
+              onclick="openModal('signupModal')"
+              class="hover:text-blue-600 font-medium">
+              Signup
+            </button>
+            <button
+              onclick="openModal('contactModal')"
+              class="hover:text-blue-600 font-medium">
+              Contact Us
+            </button>
+            <button
+              onclick="openModal('helpModal')"
+              class="hover:text-blue-600 font-medium">
+              Help
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-32 pb-20">
+      <section
+        class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-24 text-center"
+      >
+        <div class="max-w-4xl mx-auto px-4">
+          <h2 class="text-5xl md:text-6xl font-extrabold mb-6">
+            Find Your Perfect Stay
+          </h2>
+          <p class="text-xl opacity-90">
+            Best deals • Instant booking • 24/7 support
+          </p>
+        </div>
+      </section>
+      <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+            Trending Offers
+          </h2>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  <img src="beaches_in_goa.avif" class="w-full h-64 object-cover"/>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-bold">50% Off Luxury Suites</h3>
+                    <p class="text-gray-600 mt-2">Goa</p>
+                    <button class="mt-4 px-6 py-3 bg-gradient-to-r from-ppink-500 to-purple-600 text-white rounded-lg font-bold">
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  <img src="hotel room_simple.avif" class="w-full h-64 object-cover"/>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-bold">Free Breakfast + WiFi</h3>
+                    <p class="text-gray-600 mt-2">Stay 3 nights, pay for 2</p>
+                    <button
+                      class="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-white rounded-lg font-bold"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  <img src="himalayas_from_hotel_room.avif" class="w-full h-64 object-cover"/>
+                  <div class="p-6">
+                    <h3 class="text-2xl font-bold">Mountain Retreat</h3>
+                    <p class="text-gray-600 mt-2">Himalayas</p>
+                    <button
+                      class="mt-4 px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-lg font-bold"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination mt-8"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-10 text-center">
+      <p class="text-xl font-bold">BookMyHotel</p>
+      <p class="mt-2">support@BookMyHotel.in • +91 98765 43210</p>
+      <p class="mt-4 text-sm opacity-70">
+        © 2025 BookMyHotel. Made with love in India
+      </p>
+    </footer>
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-2xl max-w-md w-full">
+        <h3 class="text-2xl font-bold mb-4">Login</h3>
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full p-3 border rounded mb-3"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full p-3 border rounded mb-6"
+        />
+        <button
+          onclick="closeModal('loginModal')"
+          class="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Login
+        </button>
+        <button onclick="closeModal('loginModal')" class="mt-3 text-gray-600">
+          Close
+        </button>
+      </div>
+    </div>
+    <div
+      id="signupModal"
+      class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-2xl max-w-md w-full">
+        <h3 class="text-2xl font-bold mb-4">Create Account</h3>
+        <input
+          type="text"
+          placeholder="Full Name"
+          class="w-full p-3 border rounded mb-3"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full p-3 border rounded mb-3"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="w-full p-3 border rounded mb-6"
+        />
+        <button
+          onclick="closeModal('signupModal')"
+          class="w-full py-3 bg-green-600 text-white rounded hover:bg-green-700">
+          Sign Up
+        </button>
+      </div>
+    </div>
+    <div
+      id="contactModal"
+      class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-2xl max-w-md w-full">
+        <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+        <p class="mb-4">Email: support@hotelbook.in</p>
+        <p>Phone: +91 98765 43210</p>
+        <p class="mt-4">We reply within 2 hours!</p>
+        <button
+          onclick="closeModal('contactModal')"
+          class="mt-6 w-full py-3 bg-blue-600 text-white rounded">
+          Close
+        </button>
+      </div>
+    </div>
+    <div
+      id="helpModal"
+      class="fixed inset-0 bg-black bg-opacity-60 hidden flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-2xl max-w-md w-full">
+        <h3 class="text-2xl font-bold mb-4">Help Center</h3>
+        <p>• How to book a room?</p>
+        <p>• Cancellation policy</p>
+        <p>• Payment methods</p>
+        <p class="mt-4">Visit: hotelbook.in/help</p>
+        <button
+          onclick="closeModal('helpModal')"
+          class="mt-6 w-full py-3 bg-blue-600 text-white rounded">
+          Close
+        </button>
+      </div>
+    </div>
+    <script>
+      flatpickr("#checkin", {
+        minDate: "today",
+        dateFormat: "d M Y",
+      });
+      flatpickr("#checkout", {
+        minDate: "today",
+        dateFormat: "d M Y",
+      });
+      new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+      function searchHotels() {
+        const loc = document.getElementById("location").value;
+        const guests = document.getElementById("guests").value;
+        if (guests > 20) return alert("Maximum 20 guests allowed!");
+        alert(`Searching hotels in ${loc} for ${guests} guests...`);
+      }
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
+      window.onclick = function (e) {
+        if (e.target.classList.contains("fixed")) {
+          e.target.classList.add("hidden");
+        }
+      };
+    </script>
+  </body>
+</html>
