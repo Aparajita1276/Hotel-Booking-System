@@ -2,7 +2,7 @@
 
 Developed by **Aparajita Nag** in collaboration with **Anirban Chanda**, **Ananda Neogi**, and **Manjulika Bachar**.  
 A modern, responsive **Hotel Booking Frontend Website** built using **HTML**, **Tailwind CSS**, and **Swiper.js**.  
-This project includes pages for browsing hotels, viewing room availability, filtering/searching hotels, and a booking confirmation workflow.  
+This project includes pages for browsing hotels, viewing room availability, filtering/searching hotels.  
 
 ---
 
@@ -18,8 +18,7 @@ This project includes pages for browsing hotels, viewing room availability, filt
   - Starting price  
   - Amenities  
 - Dynamic **Search + Filter** (Hotel name, city, price range)
-- “View Rooms” button links to the Room Availability page  
-- URL parameters used for passing hotel name to next page
+- “View Rooms” button links to the Room Availability page
 
 ### ✔ Room Availability Page
 - Shows available room types:
@@ -34,6 +33,5 @@ This project includes pages for browsing hotels, viewing room availability, filt
 - Collects:
   - Guest details  
   - Check-in & Check-out dates  
-  - Number of rooms  
-- Shows a final confirmation message after submission
+  - Number of rooms
 
