@@ -1,8 +1,9 @@
 # 🏨 Hotel Booking Frontend  
 
-Developed by Aparajita Nag in collaboration with Anirban Chanda, Ananda Neogi, and Manjulika Bachar.  
+Developed by **Aparajita Nag** in collaboration with **Anirban Chanda**, **Ananda Neogi**, and **Manjulika Bachar**.  
 A modern, responsive **Hotel Booking Frontend Website** built using **HTML**, **Tailwind CSS**, and **Swiper.js**.  
 This project includes pages for browsing hotels, viewing room availability, filtering/searching hotels, and a booking confirmation workflow.  
+
 ---
 
 ## 🚀 Features
@@ -10,7 +11,6 @@ This project includes pages for browsing hotels, viewing room availability, filt
 ### ✔ Homepage Carousel
 - Built using **Swiper.js**
 - Supports custom images stored locally
-- Fully responsive with autoplay, pagination, and navigation arrows
 
 ### ✔ Available Hotels Page
 - Displays a list of hotels with:
